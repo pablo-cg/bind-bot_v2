@@ -17,9 +17,12 @@ client.on('interactionCreate', async interaction => {
 
 	const { commandName } = interaction;
 
+    const message = bind.binds[Math.floor(Math.random()*bind.binds.length)]
+
 	if (commandName === 'b') {
-		await interaction.reply(bind.binds[Math.floor(Math.random()*bind.binds.length)]);
-	} 
+		await interaction.reply(message);
+	}
+    console.log(message);
 });
 
 // Login to Discord with your client's token
